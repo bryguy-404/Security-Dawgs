@@ -21,6 +21,19 @@ npm run preview
 
 ## Cloudflare Pages
 
+Live client preview: **https://security-dawgs-preview.pages.dev/**
+
+The `security-dawgs-preview` project uses Direct Upload. GitHub pushes do not automatically update this preview. To publish a revision after checking it locally:
+
+```sh
+npm run build
+npx wrangler@4.151.3 pages deploy dist --project-name security-dawgs-preview --branch main
+```
+
+Use the Cloudflare account that owns `security-dawgs-preview`. The source remains in `bryguy-404/Security-Dawgs`. Cloudflare rejected the initial Git-connected project with an account-linking error; that integration can be resolved separately. Native Git integration would use a separate Pages project, as [Direct Upload projects cannot be converted to Git integration](https://developers.cloudflare.com/pages/get-started/direct-upload/).
+
+Build settings for a future Git-connected project:
+
 - Framework preset: Astro
 - Build command: `npm run build`
 - Build output directory: `dist`

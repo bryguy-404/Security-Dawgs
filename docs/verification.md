@@ -17,7 +17,7 @@ The visitor flow is homepage → service page → email request to Luke. This is
 - Production output totals approximately 551 KB, including the optimized transparent crest and bundled fonts.
 - The deployment ZIP contains only the generated static files, with `index.html` at its root.
 
-The live Cloudflare deployment is left to Bryan as requested.
+The initial local build was handed off before deployment. The subsequent Cloudflare preview deployment is recorded below.
 
 ## Motion and hero refinement
 
@@ -27,3 +27,13 @@ The live Cloudflare deployment is left to Bryan as requested.
 - Browser layout checks: home at 320px, 390px, 768px, 1024px, and 1440px; all three service pages at 320px, 768px, and 1440px. No horizontal overflow or clipped headings.
 - Verified the services anchor, mobile menu Escape dismissal with focus restoration, and expanded service details. No browser warnings or errors after the changes loaded.
 - CSS disables animations/transitions for reduced motion; the scroll observer also honors that preference and cancels active reveals when focus enters a control. Scroll content has no default hidden state.
+
+## Cloudflare Pages preview deployment
+
+- Public URL: https://security-dawgs-preview.pages.dev/
+- Deployment: `9efd9dfc-e4a7-4766-9956-3fcfcc420b52`, built from website commit `44cac63`.
+- Cloudflare reports deployment stage `deploy` with status `success`.
+- Uploaded 15 static assets plus `_headers`; private source attachments were not uploaded.
+- Visited all four public routes in a browser; correct headings, styling, and approved email destinations were present. The hero crest loaded, and browser warning/error logs were empty.
+- A separate Python HTTP probe received HTTP 403; browser access to the public URL worked without authentication.
+- This is a Direct Upload project. GitHub auto-deployment is not enabled: Cloudflare rejected Git integration with error `8000093` (repository associated with a different Cloudflare account).
