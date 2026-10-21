@@ -1,0 +1,12 @@
+---
+import Icon from './Icon.astro';
+import {contactLink} from '../data/site';
+---
+<footer class="site-footer">
+  <div class="container footer-main">
+    <a href="/" class="footer-logo" aria-label="Security Dawgs home"><img src="/images/security-dawgs.webp" alt="Security Dawgs bulldog crest" width="1226" height="1283" loading="lazy" /></a>
+    <div class="footer-message"><p class="eyebrow">YOUR BUSINESS. OUR WATCH.</p><p class="footer-tagline">We Guard.<br/><span>You Grow.</span></p></div>
+    <div class="footer-links"><p class="eyebrow">EXPLORE THE PACK</p><a href="/mdr/">Managed Detection & Response <Icon name="diagonal" size={15}/></a><a href="/compliance/">Compliance Advisory <Icon name="diagonal" size={15}/></a><a href="/awareness-training/">Security Awareness Training <Icon name="diagonal" size={15}/></a><a href={contactLink()} class="footer-contact">Get Protected <Icon name="diagonal" size={15}/></a></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 Security Dawgs. We Guard. You Grow.</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
+</footer>

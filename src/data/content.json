@@ -1,0 +1,227 @@
+{
+  "home": {
+    "eyebrow": "Cybersecurity That Bites Back",
+    "headline": "We Guard. You Grow.",
+    "intro": "Security Dawgs delivers enterprise-grade cyber protection to businesses of every size. AI-driven threat detection. Compliance mastery. A team that never sleeps. Your attackers don't rest — neither do we.",
+    "primaryCta": "See Our Services",
+    "secondaryCta": "Schedule a Free Threat Assessment",
+    "stats": [
+      {
+        "value": "$4.88M",
+        "description": "Average cost of a data breach in 2024"
+      },
+      {
+        "value": "194 Days",
+        "description": "Average days to identify a breach without MDR"
+      },
+      {
+        "value": "91%",
+        "description": "Of attacks start with a human mistake"
+      },
+      {
+        "value": "24/7",
+        "description": "Security Dawgs eyes on your environment"
+      }
+    ],
+    "servicesTitle": "Three Services. One Pack. Zero Gaps.",
+    "servicesIntro": "Whether you need active threat hunting, regulatory compliance, or a workforce that actually knows better than to click that link — Security Dawgs has you covered, end to end.",
+    "services": [
+      {
+        "title": "Managed Detection & Response",
+        "description": "AI-powered, round-the-clock threat hunting. We neutralize attacks before they cost you. Tailored to your environment, transparent by design.",
+        "linkLabel": "Explore MDR"
+      },
+      {
+        "title": "Compliance Advisory",
+        "description": "Complex regulations. Simple answers. We keep you audit-ready and aligned to your actual risk profile — not just a generic checklist.",
+        "linkLabel": "Explore Compliance"
+      },
+      {
+        "title": "Security Awareness Training",
+        "description": "Turn your biggest vulnerability into your strongest defense. Engaging, measurable training that drives real behavior change — not checkbox theater.",
+        "linkLabel": "Explore Training"
+      }
+    ],
+    "differences": [
+      {
+        "title": "No cookie-cutter solutions",
+        "description": "Every client gets a security posture built around their environment, their industry, and their real risks — not a templated package."
+      },
+      {
+        "title": "AI that actually works",
+        "description": "Our detection engine cuts through alert noise to identify what matters, in real time. Less false positives. More stopped attacks."
+      },
+      {
+        "title": "Full-spectrum coverage",
+        "description": "From detection to compliance to training — we cover your technology, your processes, and your people. The three places attacks actually land."
+      },
+      {
+        "title": "Radical transparency",
+        "description": "24/7 dashboards. No black boxes. You see exactly what we see, exactly when we see it."
+      },
+      {
+        "title": "Built to scale with you",
+        "description": "Start with one service. Grow into all three. Security Dawgs is built for businesses at every stage, from startup to enterprise."
+      }
+    ],
+    "whyTitle": "We Don't Just Watch. We Hunt.",
+    "quote": "The question is no longer whether your organization will face a cyber threat. It's whether you'll have the right pack at your side when it hits.",
+    "cta": {
+      "title": "Ready to Stop Being a Target?",
+      "description": "Let's assess your current security posture — free, no obligation, no fluff.",
+      "label": "Get Your Free Threat Assessment"
+    }
+  },
+  "services": [
+    {
+      "slug": "mdr",
+      "shortTitle": "MDR",
+      "title": "Managed Detection & Response",
+      "intro": "Threats don't clock out at 5pm. Neither do we. Our AI-driven MDR service hunts, identifies, and neutralizes threats around the clock — before they become breaches.",
+      "problemTitle": "Your Attackers Are Already Inside.",
+      "problemDescription": "On average, attackers move through a network for 194 days before they're caught. Most organizations don't have the staff, tools, or threat intelligence to stop them. Security Dawgs MDR changes that equation — we find them before they find your data.",
+      "pillars": [
+        {
+          "title": "AI-Driven Precision",
+          "description": "Our detection engine is trained on global threat intelligence and tuned to your specific environment. It cuts through thousands of daily alerts to surface only what actually matters — so your team acts on real threats, not noise."
+        },
+        {
+          "title": "Customized for You",
+          "description": "Generic detection rules catch generic attacks. We map your unique environment — every asset, dependency, and relationship — and build detection logic around how your business actually operates. That's how we catch what others miss."
+        },
+        {
+          "title": "Real-Time Transparency",
+          "description": "No black boxes. No monthly PDF you didn't read. Our live dashboards give you 24/7 visibility into your security posture, active incidents, and our response actions — so you're always in control."
+        }
+      ],
+      "reasons": [
+        {
+          "title": "You can't hire your way out of this problem.",
+          "description": "A true 24/7 SOC requires 6–8 skilled analysts minimum. MDR gives you that capability at a fraction of the cost — without the recruiting headache."
+        },
+        {
+          "title": "Speed is the difference between an incident and a disaster.",
+          "description": "The longer an attacker lives in your network, the more they take. Our AI detects and responds in minutes, not months."
+        },
+        {
+          "title": "Cyber insurance demands it.",
+          "description": "Most carriers now require active monitoring as a condition of coverage — or they'll price you out if you don't have it."
+        },
+        {
+          "title": "Your board is asking about detection capability.",
+          "description": "After every high-profile breach in the news, leadership wants answers. MDR is the answer."
+        },
+        {
+          "title": "Asset visibility powers everything.",
+          "description": "Powered by enterprise asset intelligence, we map every device and dependency in your environment before we write a single detection rule. That's why our signal-to-noise ratio is industry-leading."
+        }
+      ],
+      "reasonsTitle": "Why Companies Buy MDR",
+      "cta": {
+        "title": "See What's Hiding in Your Network.",
+        "description": "A free threat assessment reveals gaps before attackers do.",
+        "label": "Request a Free Assessment"
+      }
+    },
+    {
+      "slug": "compliance",
+      "shortTitle": "Compliance",
+      "title": "Compliance Advisory",
+      "intro": "Regulations are getting stricter, more complex, and more numerous every year. Security Dawgs translates the legal language into the specific actions your business needs to take — and keeps you there.",
+      "problemTitle": "Compliance Failure Costs More Than Compliance.",
+      "problemDescription": "A failed audit can kill an enterprise deal. A regulatory fine can crater a quarter. A lapsed certification can end a vendor relationship overnight. Security Dawgs keeps you audit-ready — not just at renewal time, but always.",
+      "pillars": [
+        {
+          "title": "Regulatory Mastery",
+          "description": "SOC 2. HIPAA. PCI-DSS. GDPR. CMMC. State-level privacy laws. We live in this world so you don't have to. We make complex regulatory requirements simple, specific, and actionable — and we keep you audit-ready year-round."
+        },
+        {
+          "title": "Bespoke Risk Alignment",
+          "description": "A healthcare company and a fintech have the same GDPR obligations but completely different risk profiles. We align your compliance program to your industry's actual threat landscape — not a generic framework copy-pasted from a template."
+        },
+        {
+          "title": "Ongoing Assurance",
+          "description": "Regulations change. Your business changes. Your compliance posture needs to change with them. We continuously monitor the regulatory landscape and evolve your strategy — so a new rule never catches you off guard."
+        }
+      ],
+      "reasons": [
+        {
+          "title": "Compliance is often what unlocks the deal.",
+          "description": "Enterprise customers and regulated-industry buyers demand proof of compliance before signing. Your SOC 2 report is a sales tool."
+        },
+        {
+          "title": "The regulatory landscape is too fragmented to navigate alone.",
+          "description": "Overlapping, sometimes conflicting frameworks across jurisdictions require expertise most companies don't have in-house."
+        },
+        {
+          "title": "Audit failure has direct revenue consequences.",
+          "description": "Failed audits mean lost contracts, lost partners, and in some sectors, the inability to legally operate."
+        },
+        {
+          "title": "Most companies don't lack will — they lack translation.",
+          "description": "We turn \"what the regulation says\" into \"what you need to do on your specific network, with your specific vendors.\""
+        },
+        {
+          "title": "Compliance doesn't end at the audit.",
+          "description": "Passing once doesn't mean you stay compliant. Our ongoing assurance model means you're protected between audits, not just during them."
+        }
+      ],
+      "reasonsTitle": "Why Companies Invest in Compliance Advisory",
+      "cta": {
+        "title": "Know Where You Stand Before the Auditor Does.",
+        "description": "Let's review your current compliance posture — no charge, no pressure.",
+        "label": "Get a Free Compliance Review"
+      }
+    },
+    {
+      "slug": "awareness-training",
+      "shortTitle": "Awareness Training",
+      "title": "Security Awareness Training",
+      "intro": "Your firewall can't stop an employee from clicking the wrong link. Security Dawgs training turns your workforce from your biggest vulnerability into your strongest line of defense.",
+      "problemTitle": "91% of Attacks Start with a Human.",
+      "problemDescription": "Phishing. Social engineering. Weak passwords. Credential handoffs. The most expensive breaches in history started with a single click. You can't firewall your way out of human error — you have to train it out.",
+      "pillars": [
+        {
+          "title": "Engaging Education",
+          "description": "Forget the 45-minute click-through video that everyone skips. Our interactive training is built to hold attention, challenge thinking, and stick. When training is something people actually do, it actually works."
+        },
+        {
+          "title": "Behavior Change Focus",
+          "description": "Awareness without behavior change is just trivia. We build programs that drive real, lasting changes in how your people handle email, credentials, and suspicious requests — because knowing the right thing and doing the right thing are two different problems."
+        },
+        {
+          "title": "Measurable Results",
+          "description": "We track phishing simulation click rates, reporting rates, quiz scores, and behavior trends over time. You get a clear picture of exactly how your organization's security posture is improving — and what still needs work."
+        }
+      ],
+      "reasons": [
+        {
+          "title": "People are the actual attack surface.",
+          "description": "The vast majority of breaches start with a human action — not a zero-day exploit. Your team is the target."
+        },
+        {
+          "title": "One bad click undoes everything else.",
+          "description": "You can have best-in-class MDR and full compliance certification, and one employee handing over credentials in a phishing email resets the board."
+        },
+        {
+          "title": "Insurance and compliance frameworks require it.",
+          "description": "PCI-DSS, HIPAA, SOC 2, and most cyber insurance policies explicitly mandate documented, recurring security training."
+        },
+        {
+          "title": "It's a liability and due diligence issue.",
+          "description": "\"We trained our staff\" is a materially different position in litigation and insurance claims than \"we did nothing.\""
+        },
+        {
+          "title": "Standard training doesn't work — ours does.",
+          "description": "Most mandatory training is boring checkbox theater that employees click through without retaining anything. We measure behavior change, not completion rates."
+        }
+      ],
+      "reasonsTitle": "Why Companies Invest in Security Awareness Training",
+      "cta": {
+        "title": "Would Your Team Click That Link?",
+        "description": "Find out with a free phishing simulation — before a real attacker does.",
+        "label": "Run a Free Phishing Test"
+      }
+    }
+  ]
+}
