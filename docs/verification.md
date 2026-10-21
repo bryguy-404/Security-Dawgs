@@ -18,3 +18,12 @@ The visitor flow is homepage → service page → email request to Luke. This is
 - The deployment ZIP contains only the generated static files, with `index.html` at its root.
 
 The live Cloudflare deployment is left to Bryan as requested.
+
+## Motion and hero refinement
+
+- Reworked the tilted crest panel's spacing: the caption has 25–32px of clearance in the checked desktop, tablet, and mobile layouts.
+- Added staggered headline entrances, a short crest entrance and light sweep, diagonal background accents, one-time scroll reveals, and hover/disclosure transitions.
+- `npm run check`: 13 files, zero errors, warnings, or hints. Static production build succeeded.
+- Browser layout checks: home at 320px, 390px, 768px, 1024px, and 1440px; all three service pages at 320px, 768px, and 1440px. No horizontal overflow or clipped headings.
+- Verified the services anchor, mobile menu Escape dismissal with focus restoration, and expanded service details. No browser warnings or errors after the changes loaded.
+- CSS disables animations/transitions for reduced motion; the scroll observer also honors that preference and cancels active reveals when focus enters a control. Scroll content has no default hidden state.

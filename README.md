@@ -45,10 +45,12 @@ The generated `404.html` gives Cloudflare Pages a proper fallback page rather th
 - `src/data/content.json`: client-supplied page copy, extracted from the original document and preserved as requested.
 - `src/data/site.ts`: contact destination and service-specific email subjects.
 - `src/styles/global.css`: responsive design system and page styling.
+- `src/styles/motion.css`: hero entrances and interaction transitions.
+- `src/scripts/motion.ts`: one-time scroll reveals with reduced-motion and keyboard-focus handling.
 - `src/components/ServiceArt.astro`: lightweight CSS/SVG service illustrations.
 - `public/images/security-dawgs.webp`: optimized copy of the original transparent crest.
 
-The site uses locally bundled Inter fonts, red/cream/black sections, yellow accents, a large unmodified crest, native expandable service details, and a mobile menu that supports Escape dismissal. Decorative radar motion respects reduced-motion preferences.
+The site uses locally bundled Inter fonts, red/cream/black sections, yellow accents, a large unmodified crest, native expandable service details, and a mobile menu that supports Escape dismissal. Hero entrances settle after a short sequence; sections reveal once as they enter the viewport. Motion respects reduced-motion preferences, and page content remains readable without JavaScript.
 
 All request buttons open an email to `luke@wyckoffconsulting.com`, as Bryan approved. They do not send automatically. No form or Resend integration has been added.
 

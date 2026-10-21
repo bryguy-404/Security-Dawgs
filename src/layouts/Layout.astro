@@ -1,6 +1,7 @@
 ---
 import '@fontsource-variable/inter';
 import '../styles/global.css';
+import '../styles/motion.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 interface Props { title?: string; description?: string }
@@ -25,5 +26,8 @@ const {title='Security Dawgs — We Guard. You Grow.',description='Enterprise-gr
     <Header />
     <main id="main"><slot /></main>
     <Footer />
+    <script>
+      import '../scripts/motion';
+    </script>
   </body>
 </html>
