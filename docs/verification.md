@@ -55,3 +55,13 @@ The revised visitor flow is homepage asset-discovery illustration → Asset Inte
 - Browser warning/error log: empty during local verification.
 - Reduced-motion CSS disables entrance/transition animation; the existing scroll observer honors that setting and keyboard focus. Content is visible by default without JavaScript.
 - Production output: 18 static files, approximately 658 KB. No original client documents or private correspondence in the build output.
+
+### Published revision
+
+- Website commit: `6cf6753`.
+- Immutable deployment: https://1f315a85.security-dawgs-preview.pages.dev/
+- Existing public URL updated: https://security-dawgs-preview.pages.dev/
+- Wrangler reported deployment success; uploaded eight changed assets, reused nine assets, and uploaded `_headers`.
+- Verified all six public routes, current titles/headlines, styles, original crest, and Luke email destinations. No desktop overflow or broken images were reported.
+- Verified the built JavaScript on the public site: both asset-map states work and the healthcare deep link opens its disclosure.
+- Browser warning/error log remained empty during public-route verification.
