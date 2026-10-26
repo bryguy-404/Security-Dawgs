@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+import feedback from '../data/feedback.json';
+const icons=['factory','cross','shield','network','bolt','layers','server','document'];
+---
+<Layout title="Industries — Security Dawgs" description={feedback.positioning}>
+  <section class="industries-hero dark-section section-space">
+    <div class="container"><p class="page-name">Industries</p><h1>Built for environments <br/>that can't afford <br/>to <span class="yellow">go dark.</span></h1><div class="industries-intro">{feedback.industriesIntro.map(line=><p>{line}</p>)}</div></div>
+  </section>
+  <section class="industry-directory section-space">
+    <div class="container">
+      <nav class="industry-jump-links" aria-label="Choose your industry">{feedback.industries.map(industry=><a href={`#${industry.slug}`}>{industry.name}<Icon name="arrow" size={17}/></a>)}</nav>
+      <div class="industry-details-list">{feedback.industries.map((industry,i)=><details class="industry-detail" id={industry.slug} open={i===0}>
+        <summary><Icon name={icons[i]} size={34}/><div><h2>{industry.name}</h2><p>{industry.headline}</p></div><span class="reason-toggle"><Icon name="cross" size={27}/></span></summary>
+        <div class="industry-detail-body"><div class="prose">{industry.paragraphs.map(line=><p>{line}</p>)}<p class="industry-promise">{industry.promise}</p></div><div><h3>{industry.benefitsIntro}</h3><ul class="check-list">{industry.benefits.map(line=><li><Icon name="check" size={20}/>{line}</li>)}</ul></div><p class="industry-closing">{industry.closing}</p></div>
+      </details>)}</div>
+    </div>
+  </section>
+  <CtaBand title="See what's connected. See what's exposed. See what breaks next." description={feedback.positioning} label="Show Me My Blast Radius"/>
+</Layout>
+<script>
+  function openIndustry() {
+    const id = decodeURIComponent(window.location.hash.slice(1));
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (!(target instanceof HTMLDetailsElement) || !target.classList.contains('industry-detail')) return;
+    target.open = true;
+    requestAnimationFrame(() => target.scrollIntoView({block:'start',behavior:'instant'}));
+  }
+  window.addEventListener('hashchange', openIndustry);
+  document.querySelectorAll<HTMLAnchorElement>('.industry-jump-links a').forEach(link => link.addEventListener('click', () => {
+    const target=document.getElementById(link.hash.slice(1));
+    if (target instanceof HTMLDetailsElement) target.open=true;
+  }));
+  openIndustry();
+</script>

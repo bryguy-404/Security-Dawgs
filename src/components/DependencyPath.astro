@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+const steps=[['Server 127','server'],['Supports Authentication','shield'],['Authentication Supports ERP','window'],['ERP Supports Distribution','network'],['Distribution Supports 14 Facilities','factory']];
+---
+<figure class="dependency-path">
+  <ol aria-label="Illustrative system dependency chain">
+    {steps.map(([label,icon])=><li><Icon name={icon} size={26}/><span>{label}</span><Icon name="arrow" size={20} class="path-arrow"/></li>)}
+  </ol>
+  <div class="dependency-impact"><Icon name="bolt" size={24}/><p>Potential Business Impact: <strong>Critical</strong></p></div>
+  <figcaption>Illustrative dependency path</figcaption>
+</figure>

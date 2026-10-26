@@ -2,11 +2,11 @@
 import Icon from './Icon.astro';
 import { contactLink } from '../data/site';
 interface Props { title: string; description: string; label: string; interest?: string }
-const { title, description, label, interest = 'Free Threat Assessment' } = Astro.props;
+const { title, description, label, interest = 'Blast Radius' } = Astro.props;
 ---
-<section class="cta-section" aria-label="Get protected">
+<section class="cta-section" aria-label={title}>
   <div class="container cta-inner">
-    <div data-reveal><p class="eyebrow"><span class="square-dot"></span>YOUR NEXT MOVE</p><h2>{title}</h2><p class="cta-description">{description}</p><a href={contactLink(interest)} class="button button-dark">{label}<Icon name="diagonal" size={21}/></a></div>
+    <div data-reveal><h2>{title}</h2><p class="cta-description">{description}</p><a href={contactLink(interest)} class="button button-dark">{label}<Icon name="diagonal" size={21}/></a></div>
     <div class="cta-symbol" aria-hidden="true" data-reveal data-delay="140"><svg viewBox="0 0 220 220" fill="none"><path d="M40 177 177 40M40 40h137v137" stroke="currentColor" stroke-width="27"/></svg></div>
   </div>
 </section>

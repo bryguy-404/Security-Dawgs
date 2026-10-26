@@ -1,77 +1,4 @@
 {
-  "home": {
-    "eyebrow": "Cybersecurity That Bites Back",
-    "headline": "We Guard. You Grow.",
-    "intro": "Security Dawgs delivers enterprise-grade cyber protection to businesses of every size. AI-driven threat detection. Compliance mastery. A team that never sleeps. Your attackers don't rest — neither do we.",
-    "primaryCta": "See Our Services",
-    "secondaryCta": "Schedule a Free Threat Assessment",
-    "stats": [
-      {
-        "value": "$4.88M",
-        "description": "Average cost of a data breach in 2024"
-      },
-      {
-        "value": "194 Days",
-        "description": "Average days to identify a breach without MDR"
-      },
-      {
-        "value": "91%",
-        "description": "Of attacks start with a human mistake"
-      },
-      {
-        "value": "24/7",
-        "description": "Security Dawgs eyes on your environment"
-      }
-    ],
-    "servicesTitle": "Three Services. One Pack. Zero Gaps.",
-    "servicesIntro": "Whether you need active threat hunting, regulatory compliance, or a workforce that actually knows better than to click that link — Security Dawgs has you covered, end to end.",
-    "services": [
-      {
-        "title": "Managed Detection & Response",
-        "description": "AI-powered, round-the-clock threat hunting. We neutralize attacks before they cost you. Tailored to your environment, transparent by design.",
-        "linkLabel": "Explore MDR"
-      },
-      {
-        "title": "Compliance Advisory",
-        "description": "Complex regulations. Simple answers. We keep you audit-ready and aligned to your actual risk profile — not just a generic checklist.",
-        "linkLabel": "Explore Compliance"
-      },
-      {
-        "title": "Security Awareness Training",
-        "description": "Turn your biggest vulnerability into your strongest defense. Engaging, measurable training that drives real behavior change — not checkbox theater.",
-        "linkLabel": "Explore Training"
-      }
-    ],
-    "differences": [
-      {
-        "title": "No cookie-cutter solutions",
-        "description": "Every client gets a security posture built around their environment, their industry, and their real risks — not a templated package."
-      },
-      {
-        "title": "AI that actually works",
-        "description": "Our detection engine cuts through alert noise to identify what matters, in real time. Less false positives. More stopped attacks."
-      },
-      {
-        "title": "Full-spectrum coverage",
-        "description": "From detection to compliance to training — we cover your technology, your processes, and your people. The three places attacks actually land."
-      },
-      {
-        "title": "Radical transparency",
-        "description": "24/7 dashboards. No black boxes. You see exactly what we see, exactly when we see it."
-      },
-      {
-        "title": "Built to scale with you",
-        "description": "Start with one service. Grow into all three. Security Dawgs is built for businesses at every stage, from startup to enterprise."
-      }
-    ],
-    "whyTitle": "We Don't Just Watch. We Hunt.",
-    "quote": "The question is no longer whether your organization will face a cyber threat. It's whether you'll have the right pack at your side when it hits.",
-    "cta": {
-      "title": "Ready to Stop Being a Target?",
-      "description": "Let's assess your current security posture — free, no obligation, no fluff.",
-      "label": "Get Your Free Threat Assessment"
-    }
-  },
   "services": [
     {
       "slug": "mdr",
@@ -119,8 +46,8 @@
       "reasonsTitle": "Why Companies Buy MDR",
       "cta": {
         "title": "See What's Hiding in Your Network.",
-        "description": "A free threat assessment reveals gaps before attackers do.",
-        "label": "Request a Free Assessment"
+        "description": "Know what you have. Know what connects. Know what happens next.",
+        "label": "Show Me My Blast Radius"
       }
     },
     {
@@ -175,8 +102,8 @@
     },
     {
       "slug": "awareness-training",
-      "shortTitle": "Awareness Training",
-      "title": "Security Awareness Training",
+      "shortTitle": "Human Risk",
+      "title": "Human Risk",
       "intro": "Your firewall can't stop an employee from clicking the wrong link. Security Dawgs training turns your workforce from your biggest vulnerability into your strongest line of defense.",
       "problemTitle": "91% of Attacks Start with a Human.",
       "problemDescription": "Phishing. Social engineering. Weak passwords. Credential handoffs. The most expensive breaches in history started with a single click. You can't firewall your way out of human error — you have to train it out.",

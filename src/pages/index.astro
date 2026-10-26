@@ -2,53 +2,53 @@
 import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
 import CtaBand from '../components/CtaBand.astro';
-import content from '../data/content.json';
+import AssetDiscovery from '../components/AssetDiscovery.astro';
+import feedback from '../data/feedback.json';
 import {contactLink} from '../data/site';
-const {home,services} = content;
-const icons = ['target','document','people'];
-const differenceIcons = ['shield','bolt','target','eye','scale'];
+const services=[
+  {href:'/asset-intelligence/',title:'Asset Intelligence',icon:'network',description:"Your CMDB Is Probably Wrong. We'll show you what's actually there.",link:'Explore Asset Intelligence'},
+  {href:'/mdr/',title:'Managed Detection & Response',icon:'target',description:'AI-powered, round-the-clock threat hunting. We neutralize attacks before they cost you. Tailored to your environment, transparent by design.',link:'Explore MDR'},
+  {href:'/compliance/',title:'Compliance Advisory',icon:'document',description:'Complex regulations. Simple answers. We keep you audit-ready and aligned to your actual risk profile — not just a generic checklist.',link:'Explore Compliance'},
+  {href:'/awareness-training/',title:'Human Risk',icon:'people',description:'Turn your biggest vulnerability into your strongest defense. Engaging, measurable training that drives real behavior change — not checkbox theater.',link:'Explore Human Risk'},
+];
 ---
 <Layout>
   <section class="home-hero">
     <div class="hero-atmosphere" aria-hidden="true"><span></span><span></span><span></span></div>
-    <div class="hero-topline container"><p class="eyebrow"><span class="square-dot"></span>{home.eyebrow}</p><span class="mono hero-topline-right">BUILT TO PROTECT. READY TO HUNT.</span></div>
     <div class="container hero-grid">
       <div class="hero-copy">
-        <h1><span class="hero-line"><span>We Guard. </span></span><span class="hero-line yellow"><span>You Grow.</span></span></h1>
-        <p class="hero-description">{home.intro}</p>
-        <div class="hero-actions"><a href="#services" class="button button-cream">{home.primaryCta}<Icon name="arrow" size={21}/></a><a href={contactLink('Free Threat Assessment')} class="text-link light-link">{home.secondaryCta}<Icon name="diagonal" size={17}/></a></div>
+        <h1 aria-label={feedback.hero.headline}><span class="hero-line"><span>When one </span></span><span class="hero-line"><span>system fails, </span></span><span class="hero-line yellow"><span>what breaks </span></span><span class="hero-line yellow"><span>next?</span></span></h1>
+        <p class="hero-description">{feedback.hero.description}</p>
+        <div class="hero-actions"><a href={contactLink()} class="button button-cream">{feedback.hero.cta}<Icon name="diagonal" size={21}/></a></div>
       </div>
-      <div class="hero-art">
-        <div class="crest-stage">
-          <div class="crest-strikes" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="crest-board">
-          <div class="board-top"><span>SECURITY DAWGS</span><span>24 / 7</span></div>
-          <span class="registration-mark mark-one" aria-hidden="true">+</span><span class="registration-mark mark-two" aria-hidden="true">+</span>
-          <img src="/images/security-dawgs.webp" alt="Security Dawgs — bulldog in a crimson and gold shield" width="1226" height="1283" fetchpriority="high" />
-          <div class="board-bottom"><span>ONE PACK. ZERO GAPS.</span><Icon name="shield" size={22}/></div>
-        </div>
-        </div>
-        <div class="hero-art-caption"><span class="small-cross" aria-hidden="true">✳</span><span>YOUR ATTACKERS DON'T REST.<br/>NEITHER DO WE.</span></div>
-      </div>
+      <div class="hero-art"><div class="crest-stage"><div class="crest-strikes" aria-hidden="true"><span></span><span></span><span></span></div><div class="crest-board"><img src="/images/security-dawgs.webp" alt="Security Dawgs — bulldog in a crimson and gold shield" width="1226" height="1283" fetchpriority="high" /></div></div></div>
     </div>
-    <div class="container hero-bottom"><span class="mono">DETECTION. COMPLIANCE. TRAINING.</span><a href="#numbers" class="mono">MEET YOUR FIRST LINE OF DEFENSE <span aria-hidden="true">↓</span></a></div>
   </section>
-
-  <section id="numbers" class="stats-section" aria-label="Cybersecurity by the numbers"><div class="container stats-grid">{home.stats.map((stat,i) => <div class:list={['stat',{'stat-accent':i===3}]} data-reveal data-delay={i*65}><p class="stat-value">{stat.value}</p><p class="stat-description">{stat.description}</p></div>)}</div></section>
-
-  <section id="services" class="services-section section-space">
+  <section class="discovery-section section-space" id="visibility">
     <div class="container">
-      <div class="section-heading" data-reveal><p class="eyebrow"><span class="square-dot"></span>01 / WHAT WE DO</p><div class="heading-row"><h2>Three Services.<br/>One Pack.<br/><span class="text-red">Zero Gaps.</span></h2><p class="section-intro">{home.servicesIntro}</p></div></div>
-      <div class="service-rows">{home.services.map((service,i) => <a href={`/${services[i].slug}/`} class="service-row" data-reveal data-delay={i*85}><div class="service-row-top"><span class="mono service-number">0{i+1}</span><div class="service-row-icon"><Icon name={icons[i]} size={36}/></div></div><h3>{service.title}</h3><p>{service.description}</p><div class="service-row-link"><span>{service.linkLabel}</span><span class="circle-arrow"><Icon name="diagonal" size={25}/></span></div></a>)}</div>
+      <div class="heading-row" data-reveal><h2>You can't protect<br/>what you <span class="text-red">can't see.</span></h2><p class="section-intro">{feedback.visibility.description}</p></div>
+      <AssetDiscovery/>
+      <div class="discovery-close" data-reveal><p>{feedback.visibility.promise}</p><a href={contactLink('Attack Surface')} class="text-link">Reveal My Attack Surface <Icon name="diagonal" size={20}/></a></div>
     </div>
   </section>
-
-  <section class="why-section section-space">
-    <div class="container why-grid">
-      <div class="why-heading" data-reveal><p class="eyebrow"><span class="square-dot"></span>02 / WHY SECURITY DAWGS</p><h2>We Don't<br/>Just Watch.<br/><span class="yellow">We Hunt.</span></h2><div class="hunt-art" aria-hidden="true"><div class="hunt-ring ring-1"></div><div class="hunt-ring ring-2"></div><div class="hunt-ring ring-3"></div><span class="hunt-center"><Icon name="shield" size={48}/></span><span class="hunt-node node-a"></span><span class="hunt-node node-b"></span><span class="hunt-node node-c"></span><span class="hunt-caption mono">ALWAYS ON YOUR SIDE.</span></div></div>
-      <div class="difference-list">{home.differences.map((item,i) => <div class="difference" data-reveal data-delay={i*35}><span class="difference-icon"><Icon name={differenceIcons[i]} size={26}/></span><div><h3>{item.title}</h3><p>{item.description}</p></div><span class="mono difference-number">0{i+1}</span></div>)}</div>
+  <section class="services-section section-space" id="services">
+    <div class="container">
+      <div class="heading-row" data-reveal><h2>Know your environment.<br/><span class="text-red">Protect what matters.</span></h2><p class="section-intro">{feedback.positioning}</p></div>
+      <div class="service-rows">{services.map((service,i)=><a href={service.href} class="service-row" data-reveal data-delay={i*55}><div class="service-row-icon"><Icon name={service.icon} size={36}/></div><h3>{service.title}</h3><p>{service.description}</p><div class="service-row-link"><span>{service.link}</span><span class="circle-arrow"><Icon name="diagonal" size={23}/></span></div></a>)}</div>
     </div>
-    <div class="container quote-container" data-reveal><span class="quote-mark" aria-hidden="true">“</span><blockquote>{home.quote}<cite>— Security Dawgs</cite></blockquote></div>
   </section>
-  <CtaBand {...home.cta} />
+  <section class="questions-section section-space">
+    <div class="container">
+      <h2 class="questions-title" data-reveal>The questions your team<br/>should be able to answer.</h2>
+      <div class="billboard-questions">{feedback.questions.map(question=><p data-reveal>{question}<Icon name="diagonal" size={36}/></p>)}</div>
+      <p class="questions-answer" data-reveal>Security Dawgs gives you <span class="yellow">the answers.</span></p>
+    </div>
+  </section>
+  <section class="industry-preview section-space">
+    <div class="container">
+      <div class="heading-row" data-reveal><h2>Built for environments<br/>that can't afford<br/>to <span class="text-red">go dark.</span></h2><div class="section-intro"><p>{feedback.industriesIntro[0]}</p><a href="/industries/" class="text-link">Explore Industries <Icon name="diagonal" size={20}/></a></div></div>
+      <div class="industry-links">{feedback.industries.map(industry=><a href={`/industries/#${industry.slug}`} data-reveal><span>{industry.name}</span><Icon name="diagonal" size={25}/></a>)}</div>
+    </div>
+  </section>
+  <CtaBand title="Know your blast radius. Before the incident." description={feedback.industriesIntro[1]} label="Show Me My Blast Radius"/>
 </Layout>

@@ -1,21 +1,20 @@
 ---
 import Icon from './Icon.astro';
-import { contactLink } from '../data/site';
-const links = [{href:'/',label:'Home'},{href:'/mdr/',label:'MDR'},{href:'/compliance/',label:'Compliance'},{href:'/awareness-training/',label:'Awareness Training'}];
+import { contactLink, navigation as links } from '../data/site';
 const current = Astro.url.pathname;
 ---
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="site-name" aria-label="Security Dawgs home"><span class="identity-square" aria-hidden="true"></span>SECURITY DAWGS<span class="identity-period">.</span></a>
+    <a href="/" class="site-name" aria-label="Security Dawgs home"><img src="/images/security-dawgs.webp" alt="Security Dawgs" width="1226" height="1283" /></a>
     <nav class="desktop-nav" aria-label="Main navigation">
       {links.map(link => <a href={link.href} aria-current={current === link.href ? 'page' : undefined}>{link.label}</a>)}
     </nav>
-    <a class="button button-dark header-cta" href={contactLink()}>Get Protected <Icon name="diagonal" size={17} /></a>
+    <a class="button button-dark header-cta" href={contactLink()}>Show Me My Blast Radius <Icon name="diagonal" size={18} /></a>
     <details class="mobile-menu">
       <summary><span>Menu</span><span class="menu-bars" aria-hidden="true"></span></summary>
       <nav aria-label="Mobile navigation">
-        {links.map((link,i) => <a href={link.href} aria-current={current === link.href ? 'page' : undefined}><span class="mono">0{i+1}</span>{link.label}<Icon name="diagonal" size={20}/></a>)}
-        <a href={contactLink()} class="mobile-contact">Get Protected <Icon name="arrow" size={20}/></a>
+        {links.map(link => <a href={link.href} aria-current={current === link.href ? 'page' : undefined}>{link.label}<Icon name="diagonal" size={20}/></a>)}
+        <a href={contactLink()} class="mobile-contact">Show Me My Blast Radius <Icon name="arrow" size={20}/></a>
       </nav>
     </details>
   </div>

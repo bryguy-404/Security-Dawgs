@@ -1,0 +1,571 @@
+{
+  "hero": {
+    "headline": "WHEN ONE SYSTEM FAILS, WHAT BREAKS NEXT?",
+    "description": "Security Dawgs reveals the blast radius across your entire environment — showing what’s connected, what’s exposed, and what the business impact could be before an incident becomes a crisis.",
+    "cta": "Show Me My Blast Radius"
+  },
+  "positioning": "Built for organizations where downtime, cyber risk and compliance have real business consequences.",
+  "visibility": {
+    "title": "You Can't Protect What You Can't See.",
+    "description": "Security Dawgs finds every connected asset, shows how they relate, and identifies which threats can actually impact your business — before attackers find the gaps.",
+    "promise": "Know what you have. Know what connects. Know what happens next."
+  },
+  "questions": [
+    "Do we know every device connected to our environment?",
+    "If this firewall goes down, what else goes down?",
+    "Which vulnerabilities actually threaten critical operations?",
+    "Which assets are exposed to the internet right now?",
+    "What changed immediately before the outage?",
+    "Who owns the affected systems?",
+    "Can we prove it to the auditor?"
+  ],
+  "industriesIntro": [
+    "Cybersecurity is not just about stopping attacks. It is about protecting the systems, people, operations, revenue and reputation your organization depends on every day.",
+    "Security Dawgs helps complex organizations see what is connected, understand what is exposed, and know the business impact before an incident becomes a crisis."
+  ],
+  "industries": [
+    {
+      "name": "Manufacturing",
+      "slug": "manufacturing",
+      "headline": "Protect Production Before Cyber Risk Becomes Downtime.",
+      "paragraphs": [
+        "Modern manufacturing environments are a web of IT systems, operational technology, connected equipment, suppliers, applications and production dependencies.",
+        "One compromised device can become a stopped line. One overlooked dependency can become hours — or days — of lost production.",
+        "Security Dawgs helps manufacturers uncover the assets they did not know existed, understand how critical systems connect and identify the exposures that could disrupt operations."
+      ],
+      "promise": "See every connected asset. Understand every dependency. Protect every hour of production.",
+      "benefitsIntro": "Security Dawgs helps manufacturing leaders:",
+      "benefits": [
+        "Discover IT, OT, IoT and connected production assets",
+        "Identify unmanaged or unknown devices",
+        "Understand dependencies between systems and production",
+        "Prioritize vulnerabilities based on actual operational impact",
+        "Reduce the risk of ransomware-driven downtime",
+        "Accelerate incident investigation and root-cause analysis",
+        "Protect multi-site manufacturing environments"
+      ],
+      "closing": "Because when production stops, cybersecurity becomes a revenue problem."
+    },
+    {
+      "name": "Healthcare",
+      "slug": "healthcare",
+      "headline": "Protect Patient Care, Not Just Patient Data.",
+      "paragraphs": [
+        "Healthcare organizations cannot afford to choose between cybersecurity and availability.",
+        "Hospitals, medical practices and healthcare systems depend on thousands of connected devices, clinical applications, cloud platforms, networks and third-party systems — all while protecting highly sensitive information.",
+        "Security Dawgs gives healthcare leaders greater visibility into the technology environment supporting patient care."
+      ],
+      "promise": "Know what is connected. Know what is exposed. Know what could impact care.",
+      "benefitsIntro": "Security Dawgs helps healthcare organizations:",
+      "benefits": [
+        "Discover connected clinical and non-clinical devices",
+        "Identify unmanaged and vulnerable assets",
+        "Understand dependencies across critical systems",
+        "Prioritize cyber risks that could interrupt patient care",
+        "Strengthen ransomware resilience",
+        "Support HIPAA and security compliance efforts",
+        "Reduce investigation time during security incidents"
+      ],
+      "closing": "Because the most important system in healthcare is the one your patients need right now."
+    },
+    {
+      "name": "Financial Services",
+      "slug": "financial-services",
+      "headline": "Protect Trust at the Speed of a Transaction.",
+      "paragraphs": [
+        "Financial institutions operate in an environment where downtime, fraud, data exposure and compliance failures can immediately impact customers and confidence.",
+        "Banks, credit unions, financial services companies and fintech organizations must protect increasingly complex infrastructure while maintaining continuous availability.",
+        "Security Dawgs provides the visibility and context security teams need to understand where risk exists and which threats matter most."
+      ],
+      "promise": "Protect the systems behind every account, transaction and customer relationship.",
+      "benefitsIntro": "Security Dawgs helps financial organizations:",
+      "benefits": [
+        "Identify unknown and unmanaged assets",
+        "Map relationships between critical financial systems",
+        "Prioritize vulnerabilities based on business impact",
+        "Strengthen cybersecurity and regulatory readiness",
+        "Detect threats before they disrupt critical services",
+        "Reduce blind spots across cloud, network and application environments",
+        "Improve response speed when incidents occur"
+      ],
+      "closing": "Because customers do not measure cybersecurity in alerts. They measure it in trust."
+    },
+    {
+      "name": "Telecommunications",
+      "slug": "telecommunications",
+      "headline": "Protect the Infrastructure Everyone Else Depends On.",
+      "paragraphs": [
+        "Telecommunications environments are massive, distributed and constantly changing.",
+        "Networks, towers, data centers, cloud infrastructure, circuits, devices and customer systems all depend on one another.",
+        "When a critical component fails or is compromised, the impact can spread quickly.",
+        "Security Dawgs helps telecommunications organizations understand the relationships across their environment so teams can identify the source of a problem and the services that may be affected."
+      ],
+      "promise": "See the network. Understand the dependencies. Protect the services your customers rely on.",
+      "benefitsIntro": "Security Dawgs helps telecom organizations:",
+      "benefits": [
+        "Discover distributed network assets",
+        "Map infrastructure and service dependencies",
+        "Identify exposed or unmanaged devices",
+        "Determine potential blast radius before an incident spreads",
+        "Accelerate root-cause analysis",
+        "Prioritize vulnerabilities based on service impact",
+        "Protect critical network availability"
+      ],
+      "closing": "Because when your network goes down, your customers' businesses may go down with it."
+    },
+    {
+      "name": "Critical Infrastructure",
+      "slug": "critical-infrastructure",
+      "headline": "When Failure Is Not an Option.",
+      "paragraphs": [
+        "Energy, utilities, transportation, public infrastructure and essential services operate in environments where cybersecurity can have consequences far beyond the network.",
+        "Legacy systems, operational technology, remote assets and complex dependencies make complete visibility difficult — and attackers know it.",
+        "Security Dawgs helps critical infrastructure organizations identify the systems that matter most, understand how they connect and expose potential risks before those risks become disruptions."
+      ],
+      "promise": "Protect the technology behind the services communities cannot live without.",
+      "benefitsIntro": "Security Dawgs helps critical infrastructure organizations:",
+      "benefits": [
+        "Discover IT, OT and IoT assets",
+        "Identify unknown or unmanaged technology",
+        "Understand operational dependencies",
+        "Detect potential attack paths",
+        "Prioritize vulnerabilities by mission impact",
+        "Strengthen resiliency against ransomware and cyber disruption",
+        "Improve incident response across distributed environments"
+      ],
+      "closing": "Because cybersecurity is no longer just about protecting data. It is about protecting continuity."
+    },
+    {
+      "name": "Multi-location Enterprise",
+      "slug": "multi-location-enterprise",
+      "headline": "One Organization. Hundreds of Locations. Thousands of Blind Spots.",
+      "paragraphs": [
+        "The larger and more distributed the organization becomes, the harder it is to maintain a complete picture of the technology environment.",
+        "Branch offices, facilities, warehouses, remote employees, cloud platforms, acquisitions and third-party systems create constant change.",
+        "Security Dawgs gives enterprise leaders visibility across the entire organization — not just the systems already documented."
+      ],
+      "promise": "One connected view of what you have, where it is and what it impacts.",
+      "benefitsIntro": "Security Dawgs helps multi-location organizations:",
+      "benefits": [
+        "Discover assets across locations and networks",
+        "Identify technology introduced outside normal IT processes",
+        "Standardize visibility across distributed operations",
+        "Understand dependencies between locations and centralized systems",
+        "Prioritize enterprise cyber risk",
+        "Improve response coordination across facilities",
+        "Reduce exposure created by acquisitions and decentralized IT"
+      ],
+      "closing": "Because complexity should never become invisibility."
+    },
+    {
+      "name": "Logistics & Distribution",
+      "slug": "logistics-distribution",
+      "headline": "Keep Goods Moving. Keep Systems Running.",
+      "paragraphs": [
+        "Warehouses, distribution centers, transportation networks and supply chains depend on connected technology to keep inventory moving.",
+        "Scanners, warehouse systems, transportation platforms, automated equipment, cloud applications and network infrastructure all work together.",
+        "One cyber incident can disrupt far more than IT.",
+        "It can stop shipments.",
+        "Security Dawgs helps logistics organizations understand the technology supporting their operations and identify the exposures that could interrupt the movement of goods."
+      ],
+      "promise": "Protect the systems behind every shipment, warehouse and delivery.",
+      "benefitsIntro": "Security Dawgs helps logistics and distribution companies:",
+      "benefits": [
+        "Discover connected operational assets",
+        "Identify unknown devices across warehouses and facilities",
+        "Map dependencies across logistics systems",
+        "Prioritize vulnerabilities based on operational impact",
+        "Reduce the risk of ransomware-related disruption",
+        "Protect distributed networks and facilities",
+        "Accelerate recovery when incidents occur"
+      ],
+      "closing": "Because every minute your systems are down, something stops moving."
+    },
+    {
+      "name": "Government & Public Sector",
+      "slug": "government-public-sector",
+      "headline": "Protect the Systems Communities Depend On.",
+      "paragraphs": [
+        "Government organizations manage enormous amounts of sensitive data while operating critical services with increasingly complex technology environments.",
+        "Legacy infrastructure, distributed agencies, third-party systems and limited resources can create dangerous visibility gaps.",
+        "Security Dawgs helps public-sector organizations understand what is connected, identify what is vulnerable and focus cybersecurity resources where they matter most."
+      ],
+      "promise": "Greater visibility. Smarter prioritization. Stronger public-service continuity.",
+      "benefitsIntro": "Security Dawgs helps government organizations:",
+      "benefits": [
+        "Discover unknown and unmanaged assets",
+        "Understand dependencies across departments and agencies",
+        "Identify vulnerabilities affecting essential services",
+        "Support cybersecurity and compliance initiatives",
+        "Strengthen ransomware resilience",
+        "Improve response and recovery",
+        "Protect citizen data and government operations"
+      ],
+      "closing": "Because public trust depends on systems that work when people need them."
+    }
+  ],
+  "asset": {
+    "hero": {
+      "title": "KNOW YOUR BLAST RADIUS BEFORE SOMETHING BLOWS UP.",
+      "body": [
+        "You probably know about most of the technology in your environment.",
+        "Most isn't good enough.",
+        "Every unmanaged device. Every forgotten cloud instance. Every undocumented connection. Every unknown dependency creates another place for an outage, configuration error or cyberattack to become something much bigger.",
+        "Security Dawgs Asset Intelligence gives you a continuously updated view of your connected environment — showing you what you have, how it connects, what depends on it, what could be affected, and where the greatest risk exists.",
+        "Stop looking at assets.",
+        "Start understanding your environment.",
+        "[ SHOW ME MY BLAST RADIUS ]"
+      ]
+    },
+    "visibility": {
+      "title": "YOU CAN'T PROTECT WHAT YOU CAN'T SEE.",
+      "body": [
+        "Traditional asset inventories tell you what should be there.",
+        "Security Dawgs helps uncover what is actually there.",
+        "Across complex environments, assets constantly appear, disappear, move, change ownership and connect to new systems.",
+        "Your inventory needs to keep up.",
+        "Asset Intelligence continuously discovers and connects technology across:",
+        "IT",
+        "Servers, endpoints, switches, routers, firewalls and infrastructure.",
+        "OT",
+        "Operational technology, production systems and industrial environments.",
+        "IoT",
+        "Connected devices that may never appear in a traditional IT inventory.",
+        "CLOUD",
+        "Infrastructure, services, workloads and rapidly changing cloud resources.",
+        "APPLICATIONS",
+        "The systems your employees, customers and business processes depend on.",
+        "SERVICES",
+        "The business services supported by multiple technologies and dependencies.",
+        "TELECOM",
+        "Circuits, connectivity and communications infrastructure.",
+        "One environment.",
+        "One connected view.",
+        "Fewer blind spots."
+      ]
+    },
+    "dependencies": {
+      "title": "A LIST OF ASSETS ISN'T INTELLIGENCE.",
+      "body": [
+        "Knowing a server exists is useful.",
+        "Knowing what happens if that server fails is intelligence.",
+        "Security Dawgs goes beyond traditional inventory by understanding the relationships between the assets in your environment.",
+        "Instead of seeing:",
+        "SERVER 127 — ONLINE",
+        "You begin seeing:",
+        "SERVER 127",
+        "↓",
+        "Supports Authentication",
+        "↓",
+        "Authentication Supports ERP",
+        "↓",
+        "ERP Supports Distribution",
+        "↓",
+        "Distribution Supports 14 Facilities",
+        "↓",
+        "Potential Business Impact: Critical",
+        "That changes the conversation.",
+        "You are no longer asking:",
+        "“Is the server working?”",
+        "You're asking:",
+        "“What does the business lose if it isn't?”"
+      ]
+    },
+    "blast": {
+      "title": "KNOW THE BLAST RADIUS.",
+      "body": [
+        "BEFORE THE INCIDENT.",
+        "One device becomes compromised.",
+        "What can it reach?",
+        "A circuit fails.",
+        "Which locations lose service?",
+        "A database slows.",
+        "Which applications begin failing?",
+        "A firewall configuration changes.",
+        "Which business functions depend on it?",
+        "An OT device disappears.",
+        "Does production stop?",
+        "Do you know the answers right now?",
+        "Security Dawgs maps upstream and downstream relationships so your team can understand the potential impact of an asset before an incident forces you to figure it out under pressure.",
+        "SEE WHAT'S CONNECTED.",
+        "SEE WHAT'S EXPOSED.",
+        "SEE WHAT BREAKS NEXT.",
+        "[ MAP MY BLAST RADIUS ]"
+      ]
+    },
+    "questions": {
+      "title": "THE FIVE QUESTIONS EVERY TECHNOLOGY LEADER SHOULD BE ABLE TO ANSWER.",
+      "body": [
+        "1. WHAT DO WE ACTUALLY HAVE?",
+        "Not what the spreadsheet says.",
+        "Not what someone documented six months ago.",
+        "Not what the CMDB thinks you have.",
+        "What is actually connected to your environment today?",
+        "2. WHAT IS CONNECTED TO WHAT?",
+        "Assets do not operate independently.",
+        "Applications depend on databases.",
+        "Facilities depend on networks.",
+        "Networks depend on circuits.",
+        "Production depends on OT.",
+        "Employees depend on applications.",
+        "Customers depend on all of it working together.",
+        "Security Dawgs helps expose those relationships.",
+        "3. IF THIS FAILS, WHAT ELSE FAILS?",
+        "This is where asset visibility becomes business intelligence.",
+        "Understand the downstream impact of a failure before making a change, responding to an incident or deciding which risk deserves immediate attention.",
+        "That's your blast radius.",
+        "4. WHERE DID THE PROBLEM REALLY START?",
+        "The loudest alert isn't always the cause.",
+        "One underlying problem can trigger dozens — or hundreds — of symptoms across different systems.",
+        "Asset Intelligence gives your team the dependency context needed to work backward toward the initiating problem instead of chasing every downstream alarm independently.",
+        "Find the cause.",
+        "Not just the symptoms.",
+        "5. WHAT SHOULD WE FIX FIRST?",
+        "Not every vulnerability represents the same business risk.",
+        "A severe vulnerability on an isolated device may represent less operational danger than a moderate vulnerability sitting in the middle of a critical dependency chain.",
+        "Context changes prioritization.",
+        "Security Dawgs helps your team understand:",
+        "What is vulnerable.",
+        "What is exposed.",
+        "What it connects to.",
+        "What depends on it.",
+        "What the business consequence could be.",
+        "Now your team can prioritize based on impact, not just severity."
+      ]
+    },
+    "signals": {
+      "title": "FROM 1,000 ALERTS TO ONE STORY.",
+      "body": [
+        "Traditional security and monitoring tools are very good at telling you that something happened.",
+        "The problem?",
+        "They frequently tell you independently.",
+        "Network monitoring sees a problem.",
+        "The firewall generates an alert.",
+        "The application begins throwing errors.",
+        "A cloud service reports degradation.",
+        "Employees start submitting tickets.",
+        "Different teams begin investigating different symptoms.",
+        "But what if they're all part of the same event?",
+        "Security Dawgs adds the relationship context needed to connect those signals and understand the bigger picture.",
+        "Instead of:",
+        "15 systems.",
+        "73 alerts.",
+        "4 teams investigating.",
+        "Nobody knows the cause.",
+        "You get:",
+        "ONE INCIDENT.",
+        "ONE ROOT CAUSE.",
+        "ONE KNOWN BLAST RADIUS.",
+        "ONE COORDINATED RESPONSE."
+      ]
+    },
+    "changes": {
+      "title": "YOUR ENVIRONMENT CHANGES EVERY DAY.",
+      "body": [
+        "YOUR MAP SHOULD TOO.",
+        "New devices appear.",
+        "Cloud resources spin up.",
+        "Applications change.",
+        "Employees move.",
+        "Sites open.",
+        "Companies acquire companies.",
+        "Vendors connect.",
+        "Equipment gets replaced.",
+        "Infrastructure changes.",
+        "Traditional asset inventories can become inaccurate almost as soon as they're updated.",
+        "Security Dawgs Asset Intelligence is designed around the idea that your technology environment is alive.",
+        "As the environment changes, your understanding of it needs to change with it.",
+        "No more relying entirely on yesterday's map to protect today's business."
+      ]
+    },
+    "agentless": {
+      "title": "AGENTLESS BY DESIGN.",
+      "body": [
+        "VISIBILITY SHOULDN'T CREATE ANOTHER MANAGEMENT PROBLEM.",
+        "Adding another agent to thousands of devices can create deployment headaches, maintenance requirements and yet another technology footprint your team must manage.",
+        "Asset Intelligence is designed to discover and understand your environment using the systems and data sources already available.",
+        "That means you can gain deeper visibility without turning asset discovery into another massive deployment project.",
+        "Less installation.",
+        "Less disruption.",
+        "Faster visibility."
+      ]
+    },
+    "tools": {
+      "title": "NO RIP AND REPLACE.",
+      "body": [
+        "MAKE THE TOOLS YOU ALREADY OWN SMARTER.",
+        "You've already invested in technology.",
+        "Firewalls.",
+        "Endpoint protection.",
+        "Monitoring.",
+        "Cloud management.",
+        "IT service management.",
+        "SIEM.",
+        "CMDB.",
+        "Security tools.",
+        "Security Dawgs Asset Intelligence does not need to make those investments irrelevant.",
+        "It helps give them context.",
+        "Think of your existing technology as thousands of individual pieces of information.",
+        "Asset Intelligence connects those pieces into a bigger picture.",
+        "Keep your tools.",
+        "Add the intelligence that connects them."
+      ]
+    },
+    "planning": {
+      "title": "SEE A CHANGE BEFORE YOU MAKE A CHANGE.",
+      "body": [
+        "A routine update shouldn't become an outage.",
+        "Before touching a critical system, wouldn't you want to know exactly what depends on it?",
+        "Asset Intelligence can help teams understand potential downstream dependencies before:",
+        "Patching infrastructure",
+        "Replacing hardware",
+        "Updating applications",
+        "Changing firewall rules",
+        "Migrating services",
+        "Taking systems offline",
+        "Moving workloads",
+        "Know the potential impact before you hit ENTER."
+      ]
+    },
+    "business": {
+      "title": "TURN CYBERSECURITY INTO BUSINESS CONTEXT.",
+      "body": [
+        "Executives don't care that Router 0043 generated an alert.",
+        "They care that:",
+        "Three distribution centers may lose connectivity.",
+        "They don't care that DB-PROD-07 has a latency issue.",
+        "They care that:",
+        "Customers may not be able to place orders.",
+        "They don't care that an OT endpoint disappeared.",
+        "They care that:",
+        "Production could stop.",
+        "Security Dawgs helps connect technical conditions to the systems, locations and operations they support.",
+        "That means the conversation moves from:",
+        "“We have an IT problem.”",
+        "to:",
+        "“Here is the business impact, here is what caused it, and here is what we need to protect first.”"
+      ]
+    },
+    "teams": {
+      "title": "DIFFERENT TEAMS. ONE VERSION OF THE TRUTH.",
+      "body": [
+        "SECURITY TEAMS",
+        "See exposures, unexpected relationships, potential attack paths and assets that may have been overlooked.",
+        "IT OPERATIONS",
+        "Understand dependencies, investigate incidents faster and reduce time spent chasing symptoms.",
+        "NETWORK TEAMS",
+        "See how infrastructure, circuits, locations and applications connect.",
+        "OT TEAMS",
+        "Gain greater visibility into operational technology without treating the production environment like traditional IT.",
+        "EXECUTIVES",
+        "Understand which technology risks could become operational, financial or reputational risks.",
+        "COMPLIANCE TEAMS",
+        "Build greater confidence that the organization's technology inventory reflects the environment that actually exists."
+      ]
+    },
+    "reveals": {
+      "title": "WHAT COULD ASSET INTELLIGENCE REVEAL IN YOUR ENVIRONMENT?",
+      "body": [
+        "UNKNOWN ASSETS",
+        "Devices operating in your environment that aren't represented in traditional inventory.",
+        "HIDDEN DEPENDENCIES",
+        "Critical relationships known by one engineer — but documented nowhere.",
+        "INTERNET EXPOSURE",
+        "Assets and services with external exposure that deserve closer attention.",
+        "BUSINESS-CRITICAL PATHS",
+        "The technology chains supporting revenue, production, patient care, transactions or customer service.",
+        "SINGLE POINTS OF FAILURE",
+        "Assets where one failure could create disproportionate downstream impact.",
+        "UNEXPECTED CONNECTIONS",
+        "Relationships that may create security, operational or compliance concerns.",
+        "STALE INVENTORY",
+        "Assets that exist in documentation but no longer accurately represent the live environment.",
+        "OWNERSHIP GAPS",
+        "Critical technology without clearly identified responsibility."
+      ]
+    },
+    "incident": {
+      "title": "WHEN SOMETHING GOES WRONG, EVERY MINUTE COUNTS.",
+      "body": [
+        "The traditional incident:",
+        "Something breaks.",
+        "↓",
+        "Alerts begin firing.",
+        "↓",
+        "Users report problems.",
+        "↓",
+        "Teams begin investigating.",
+        "↓",
+        "Someone opens the CMDB.",
+        "↓",
+        "Someone calls the network team.",
+        "↓",
+        "Someone calls the application team.",
+        "↓",
+        "Someone finally finds the engineer who “knows how everything connects.”",
+        "↓",
+        "The team identifies the problem.",
+        "Meanwhile, the business is still down."
+      ]
+    },
+    "response": {
+      "title": "THE SECURITY DAWGS APPROACH",
+      "body": [
+        "Something breaks.",
+        "↓",
+        "Identify the initiating condition.",
+        "↓",
+        "Trace the dependency path.",
+        "↓",
+        "Understand the affected assets and services.",
+        "↓",
+        "Identify the blast radius.",
+        "↓",
+        "Determine the responsible teams.",
+        "↓",
+        "Act with context.",
+        "Less guessing.",
+        "Less finger-pointing.",
+        "Less time figuring out what happened.",
+        "More time fixing it."
+      ]
+    },
+    "assessment": {
+      "title": "THE CONNECTED ASSET ASSESSMENT",
+      "body": [
+        "FIND OUT WHAT YOU DON'T KNOW.",
+        "You don't need to transform your entire technology environment to discover whether you have a visibility problem.",
+        "Start with one defined part of the environment.",
+        "Let Security Dawgs help uncover:",
+        "What exists",
+        "What you've missed",
+        "How assets connect",
+        "Which dependencies matter",
+        "What's potentially exposed",
+        "Where critical business services may be vulnerable",
+        "What the blast radius could look like",
+        "Then compare what we discover against what you thought you knew.",
+        "You may be surprised by the difference.",
+        "[ START MY CONNECTED ASSET ASSESSMENT ]"
+      ]
+    },
+    "closing": {
+      "title": "YOUR CMDB TELLS YOU WHAT SHOULD BE THERE.",
+      "body": [
+        "ASSET INTELLIGENCE SHOWS YOU WHAT'S REALLY THERE.",
+        "And more importantly:",
+        "WHAT IT CONNECTS TO.",
+        "WHAT DEPENDS ON IT.",
+        "WHAT COULD BREAK.",
+        "WHAT THE BUSINESS IMPACT COULD BE.",
+        "Because cybersecurity isn't just about finding threats.",
+        "It's about understanding what you're protecting.",
+        "KNOW YOUR ENVIRONMENT.",
+        "KNOW YOUR DEPENDENCIES.",
+        "KNOW YOUR BLAST RADIUS.",
+        "Before someone else discovers it for you.",
+        "[ SHOW ME MY BLAST RADIUS ]"
+      ]
+    }
+  }
+}

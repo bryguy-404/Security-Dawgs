@@ -1,0 +1,51 @@
+---
+import Icon from './Icon.astro';
+const nodes = [
+  {name:'Cloud resources',icon:'cloud',className:'map-cloud',known:false},
+  {name:'IT infrastructure',icon:'server',className:'map-it',known:true},
+  {name:'SaaS applications',icon:'window',className:'map-saas',known:false},
+  {name:'Your environment',icon:'network',className:'map-center',known:true},
+  {name:'Operational technology',icon:'factory',className:'map-ot',known:false},
+  {name:'Business services',icon:'layers',className:'map-services',known:true},
+  {name:'Unmanaged IoT',icon:'chip',className:'map-iot',known:false},
+];
+---
+<figure class="discovery" data-discovery data-mode="connected" data-reveal>
+  <div class="discovery-comparison">
+    <div class="inventory-before"><h3>What you think you have</h3><p><strong>1,842</strong><span>Known Assets</span></p></div>
+    <div class="inventory-after"><h3>What Security Dawgs discovers</h3><p><strong>2,317</strong><span>Connected Assets</span></p></div>
+  </div>
+  <div class="network-panel">
+    <div class="network-controls" role="group" aria-label="Explore the illustrative asset map">
+      <button type="button" data-mode-button="known" aria-pressed="false">Known inventory</button>
+      <button type="button" data-mode-button="connected" aria-pressed="true">Reveal connections <Icon name="arrow" size={18}/></button>
+    </div>
+    <div class="asset-map" aria-label="Illustrative connections between IT, cloud, SaaS, OT, business services, and unmanaged IoT">
+      <svg class="map-lines" viewBox="0 0 800 360" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M130 60H400V180H670V300H400V180H130Z"/><path class="discovered-line" d="M400 60H670V180M130 180V300H400M130 60V300M670 60V300"/><path class="impact-line" d="M130 300H400V180H670V300"/></g><circle cx="400" cy="180" r="95" fill="none" stroke="currentColor" opacity=".18" stroke-dasharray="4 7"/></svg>
+      {nodes.map(node=><div class:list={['map-node',node.className,{'discovered-node':!node.known}]}><Icon name={node.icon} size={27}/><span>{node.name}</span></div>)}
+    </div>
+    <p class="map-status" aria-live="polite" data-map-status>Hidden assets. Connected dependencies. A visible attack path.</p>
+    <div class="discovery-findings">
+      <p><strong>37</strong><span>Internet-Facing Assets</span></p>
+      <p><strong>12</strong><span>Unmanaged Devices</span></p>
+      <p><strong>4</strong><span>Critical Dependency Paths</span></p>
+      <p><strong>1</strong><span>High-Risk Attack Path</span></p>
+    </div>
+  </div>
+  <figcaption>Illustrative environment — example figures, not a scan of your network.</figcaption>
+  <p class="discovery-result"><strong>475 assets you didn't know existed.</strong><span>That's where attackers start.</span></p>
+</figure>
+<script>
+  document.querySelectorAll<HTMLElement>('[data-discovery]').forEach(demo => {
+    const buttons = demo.querySelectorAll<HTMLButtonElement>('[data-mode-button]');
+    const status = demo.querySelector<HTMLElement>('[data-map-status]');
+    buttons.forEach(button => button.addEventListener('click', () => {
+      const mode = button.dataset.modeButton ?? 'connected';
+      demo.dataset.mode = mode;
+      buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      if (status) status.textContent = mode === 'known'
+        ? 'A partial inventory leaves unknown assets and dependencies out of view.'
+        : 'Hidden assets. Connected dependencies. A visible attack path.';
+    }));
+  });
+</script>

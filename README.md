@@ -1,6 +1,6 @@
 # Security Dawgs
 
-Four-page Astro marketing website, ready for static hosting on Cloudflare Pages.
+Six-page Astro marketing website, hosted as a static site on Cloudflare Pages.
 
 ## Local development
 
@@ -49,21 +49,26 @@ The generated `404.html` gives Cloudflare Pages a proper fallback page rather th
 | Page | Route |
 | --- | --- |
 | Home | `/` |
+| Asset Intelligence | `/asset-intelligence/` |
 | Managed Detection & Response | `/mdr/` |
 | Compliance Advisory | `/compliance/` |
-| Security Awareness Training | `/awareness-training/` |
+| Human Risk | `/awareness-training/` |
+| Industries | `/industries/` |
 
 ## Content and design
 
-- `src/data/content.json`: client-supplied page copy, extracted from the original document and preserved as requested.
+- `src/data/content.json`: retained client-supplied MDR, compliance, and human-risk copy.
+- `src/data/feedback.json`: client-supplied October 26 messaging, Asset Intelligence copy, and eight industry write-ups.
 - `src/data/site.ts`: contact destination and service-specific email subjects.
 - `src/styles/global.css`: responsive design system and page styling.
 - `src/styles/motion.css`: hero entrances and interaction transitions.
 - `src/scripts/motion.ts`: one-time scroll reveals with reduced-motion and keyboard-focus handling.
 - `src/components/ServiceArt.astro`: lightweight CSS/SVG service illustrations.
+- `src/components/AssetDiscovery.astro`: illustrative asset map with accessible inventory/connection controls; the figures are supplied examples, not a live network scan.
+- `src/components/DependencyPath.astro`: the supplied example connecting a server to business services and facilities.
 - `public/images/security-dawgs.webp`: optimized copy of the original transparent crest.
 
-The site uses locally bundled Inter fonts, red/cream/black sections, yellow accents, a large unmodified crest, native expandable service details, and a mobile menu that supports Escape dismissal. Hero entrances settle after a short sequence; sections reveal once as they enter the viewport. Motion respects reduced-motion preferences, and page content remains readable without JavaScript.
+The site uses locally bundled Inter fonts, red/cream/black sections, yellow accents, the original crest, native expandable service and industry details, and a mobile menu that supports Escape dismissal. The October 26 revision removes decorative small labels and section numbering, leads with asset visibility and blast radius, and keeps meaningful example figures. Industry deep links automatically open their matching disclosure. Hero entrances settle after a short sequence; sections reveal once as they enter the viewport. Motion respects reduced-motion preferences, and page content remains readable without JavaScript.
 
 All request buttons open an email to `luke@wyckoffconsulting.com`, as Bryan approved. They do not send automatically. No form or Resend integration has been added.
 

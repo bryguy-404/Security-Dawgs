@@ -2,6 +2,13 @@
 interface Props { name?: string; size?: number; class?: string }
 const { name = 'arrow', size = 24, class: className = '' } = Astro.props;
 const paths: Record<string, string> = {
+  network: 'M9 9h6v6H9ZM3 3h4v4H3Zm14 0h4v4h-4ZM3 17h4v4H3Zm14 0h4v4h-4ZM5 7v5h4m6 0h4V7M5 17v-5m14 5v-5',
+  server: 'M3 3h18v7H3Zm0 11h18v7H3ZM7 6h1m-1 11h1m4-11h5m-5 11h5',
+  cloud: 'M6 18a4 4 0 1 1 0-8 6 6 0 0 1 12-2 5 5 0 0 1 0 10H6Z',
+  window: 'M3 4h18v16H3Zm0 5h18M6 7h1m3 0h1',
+  factory: 'M3 21V10l6 4V8l6 4V3h4l2 18H3Zm4-4h1m3 0h1m4 0h1',
+  chip: 'M6 6h12v12H6Zm3 3h6v6H9ZM9 2v4m6-4v4M9 18v4m6-4v4M2 9h4m-4 6h4m12-6h4m-4 6h4',
+  layers: 'm12 3 10 5-10 5L2 8l10-5ZM2 12l10 5 10-5M2 16l10 5 10-5',
   arrow: 'M5 12h14m-6-6 6 6-6 6',
   diagonal: 'M6 18 18 6M6 6h12v12',
   shield: 'M12 3 3 7v5c0 5 9 9 9 9s9-4 9-9V7L12 3Zm-4 9 3 3 5-6',

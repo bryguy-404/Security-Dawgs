@@ -37,3 +37,21 @@ The initial local build was handed off before deployment. The subsequent Cloudfl
 - Visited all four public routes in a browser; correct headings, styling, and approved email destinations were present. The hero crest loaded, and browser warning/error logs were empty.
 - A separate Python HTTP probe received HTTP 403; browser access to the public URL worked without authentication.
 - This is a Direct Upload project. GitHub auto-deployment is not enabled: Cloudflare rejected Git integration with error `8000093` (repository associated with a different Cloudflare account).
+
+## Client feedback revision — October 26, 2026
+
+The revised visitor flow is homepage asset-discovery illustration → Asset Intelligence, an existing service, or a named industry → an email request to Luke. The demonstration uses the client's illustrative figures and does not scan a visitor's network.
+
+- Implemented the supplied homepage messaging, visual cleanup, Asset Intelligence page, Human Risk navigation label, and all eight industry write-ups. Preserved the existing awareness-training URL.
+- Used the explicitly designated top-of-page headline and CTA. Used the alternate visibility headline below the hero and organized the industry copy on one page with accessible disclosures.
+- Removed decorative small labels and section numbering. Replaced the free threat-assessment offer; retained the separately supplied compliance-review and phishing-test offers.
+- `npm run check`: 17 files, zero errors, warnings, or hints.
+- `npm run build`: six marketing pages and `404.html` built successfully.
+- Copy audit: every supplied Asset Intelligence content line and industry passage appears in its generated page; all retained service-copy values and the homepage questions are present. Comparison normalizes case, punctuation, and whitespace.
+- Link audit: all 176 links resolve to a generated route, an existing section ID, or the approved Luke email destination. One H1 per page and no forms.
+- Browser layout checks: all six routes at 1440px, 768px, and 320px. Fixed the narrow Industries headline and disclosure-name overflow, then verified that route again at 320px with no overflow or clipped headings. No broken images were reported.
+- Visual review: desktop home, Asset Intelligence, and compliance; mobile home, asset map, and expanded healthcare content.
+- Interaction checks: both map states and pressed/status updates; homepage-to-healthcare deep link opens the correct disclosure; disclosure mouse and Enter interactions; mobile menu opens and Escape returns focus to its summary; Asset Intelligence question disclosure; assessment email destination.
+- Browser warning/error log: empty during local verification.
+- Reduced-motion CSS disables entrance/transition animation; the existing scroll observer honors that setting and keyboard focus. Content is visible by default without JavaScript.
+- Production output: 18 static files, approximately 658 KB. No original client documents or private correspondence in the build output.

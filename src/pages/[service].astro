@@ -4,22 +4,20 @@ import Icon from '../components/Icon.astro';
 import ServiceArt from '../components/ServiceArt.astro';
 import CtaBand from '../components/CtaBand.astro';
 import content from '../data/content.json';
-import {contactLink,serviceInterests} from '../data/site';
-export function getStaticPaths(){return content.services.map((service,index)=>({params:{service:service.slug},props:{service,index}}));}
-const {service,index}=Astro.props;
+import {contactLink,serviceInterests,navigation} from '../data/site';
+export function getStaticPaths(){return content.services.map(service=>({params:{service:service.slug},props:{service}}));}
+const {service}=Astro.props;
 const interest=serviceInterests[service.slug as keyof typeof serviceInterests];
-const headingLines:Record<string,string[]>={mdr:['Managed','Detection','& Response'],compliance:['Compliance','Advisory'],'awareness-training':['Security','Awareness','Training']};
+const headingLines:Record<string,string[]>={mdr:['Managed','Detection','& Response'],compliance:['Compliance','Advisory'],'awareness-training':['Human','Risk']};
 const icons=['target','shield','eye'];
 ---
 <Layout title={`${service.title} — Security Dawgs`} description={service.intro}>
   <section class:list={['service-hero',`service-hero-${service.slug}`]}>
-    <div class="container service-breadcrumb"><a href="/">Home</a><span>/</span><span>{service.shortTitle}</span></div>
-    <div class="container service-hero-grid"><div class="service-hero-copy"><p class="eyebrow"><span class="square-dot"></span>0{index+1} / THE SECURITY DAWGS PACK</p><h1 aria-label={service.title}>{headingLines[service.slug].map((line,i)=><span class:list={{yellow:i===headingLines[service.slug].length-1}}>{line}{i < headingLines[service.slug].length-1 ? ' ' : ''}</span>)}</h1><p class="hero-description">{service.intro}</p><a href={contactLink(interest)} class="button button-cream">{service.cta.label}<Icon name="diagonal" size={20}/></a></div><ServiceArt slug={service.slug}/></div>
-    <div class="container service-hero-bottom"><span class="mono">WE GUARD. YOU GROW.</span><a href="#the-problem" class="mono">KNOW WHAT YOU'RE UP AGAINST <span aria-hidden="true">↓</span></a></div>
+    <div class="container service-hero-grid"><div class="service-hero-copy"><h1 aria-label={service.title}>{headingLines[service.slug].map((line,i)=><span class:list={{yellow:i===headingLines[service.slug].length-1}}>{line}{i < headingLines[service.slug].length-1 ? ' ' : ''}</span>)}</h1><p class="hero-description">{service.intro}</p><a href={contactLink(interest)} class="button button-cream">{service.cta.label}<Icon name="diagonal" size={20}/></a></div><ServiceArt slug={service.slug}/></div>
   </section>
-  <section class="problem-section section-space" id="the-problem"><div class="container problem-grid" data-reveal><p class="eyebrow"><span class="square-dot"></span>THE PROBLEM</p><div><h2>{service.problemTitle}</h2><p>{service.problemDescription}</p></div></div></section>
-  <section class="pillars-section section-space"><div class="container"><div class="pillars-heading" data-reveal><p class="eyebrow"><span class="square-dot"></span>HOW WE HAVE YOUR BACK</p><span class="mono">THREE PILLARS. ONE STRONGER DEFENSE.</span></div><div class="pillar-grid">{service.pillars.map((pillar,i)=><article class="pillar" data-reveal data-delay={i*85}><div class="pillar-top"><span class="mono">0{i+1}</span><Icon name={icons[i]} size={36}/></div><h2>{pillar.title}</h2><p>{pillar.description}</p></article>)}</div></div></section>
-  <section class="reasons-section section-space"><div class="container reasons-grid"><div class="reasons-heading" data-reveal><p class="eyebrow"><span class="square-dot"></span>THE BUSINESS CASE</p><h2>{service.reasonsTitle}</h2><span class="reasons-arrow" aria-hidden="true"><Icon name="diagonal" size={100}/></span></div><div class="reasons-list">{service.reasons.map((reason,i)=><details class="reason" open={i===0} data-reveal data-delay={i*30}><summary><span class="mono reason-number">0{i+1}</span><h3>{reason.title}</h3><span class="reason-toggle"><Icon name="cross" size={21}/></span></summary><p>{reason.description}</p></details>)}</div></div></section>
+  <section class="problem-section section-space"><div class="container editorial-grid" data-reveal><h2>{service.problemTitle}</h2><p class="section-intro">{service.problemDescription}</p></div></section>
+  <section class="pillars-section section-space dark-section"><div class="container"><div class="pillar-grid">{service.pillars.map((pillar,i)=><article class="pillar" data-reveal data-delay={i*85}><Icon name={icons[i]} size={36}/><h2>{pillar.title}</h2><p>{pillar.description}</p></article>)}</div></div></section>
+  <section class="reasons-section section-space"><div class="container reasons-grid"><h2 data-reveal>{service.reasonsTitle}</h2><div class="reasons-list">{service.reasons.map((reason,i)=><details class="reason" open={i===0}><summary><h3>{reason.title}</h3><span class="reason-toggle"><Icon name="cross" size={21}/></span></summary><p>{reason.description}</p></details>)}</div></div></section>
   <CtaBand {...service.cta} interest={interest}/>
-  <section class="other-services"><div class="container"><p class="eyebrow">MEET THE REST OF THE PACK</p><div class="other-service-links">{content.services.filter(s=>s.slug!==service.slug).map(s=><a href={`/${s.slug}/`} data-reveal><span>{s.title}</span><Icon name="diagonal" size={29}/></a>)}</div></div></section>
+  <section class="other-services"><div class="container"><h2>Explore services</h2><div class="other-service-links">{navigation.filter(s=>s.href!==`/${service.slug}/`&&s.href!=='/industries/').map(s=><a href={s.href}><span>{s.label}</span><Icon name="diagonal" size={25}/></a>)}</div></div></section>
 </Layout>

@@ -5,7 +5,7 @@ import '../styles/motion.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 interface Props { title?: string; description?: string }
-const {title='Security Dawgs — We Guard. You Grow.',description='Enterprise-grade cyber protection for businesses of every size. Managed detection and response, compliance advisory, and security awareness training.'} = Astro.props;
+const {title='Security Dawgs — Know Your Blast Radius',description='Security Dawgs reveals what’s connected, what’s exposed, and what the business impact could be. Asset intelligence, MDR, compliance, and human risk.'} = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -18,7 +18,7 @@ const {title='Security Dawgs — We Guard. You Grow.',description='Enterprise-gr
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="Security Dawgs" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/webp" href="/images/security-dawgs.webp" />
     <title>{title}</title>
   </head>
   <body id="top">
