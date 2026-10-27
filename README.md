@@ -1,6 +1,6 @@
 # Security Dawgs
 
-Six-page Astro marketing website, hosted as a static site on Cloudflare Pages.
+Seven-page Astro marketing website on Cloudflare Pages, with a Pages Function for contact submissions.
 
 ## Local development
 
@@ -21,7 +21,11 @@ npm run preview
 
 ## Cloudflare Pages
 
-Live client preview: **https://security-dawgs-preview.pages.dev/**
+Current Git-connected website: **https://security-dawgs.pages.dev/**
+
+The `security-dawgs` project in Arambula722@gmail.com's Cloudflare account deploys automatically from `main` in `bryguy-404/Security-Dawgs`. Build command: `npm run build`; output: `dist`. Cloudflare also compiles the root `functions/` directory. `public/_routes.json` limits function requests to `/api/*`, keeping the marketing pages static.
+
+The older **https://security-dawgs-preview.pages.dev/** project is a separate Direct Upload preview in another account. Updating GitHub does not update that older address.
 
 The `security-dawgs-preview` project uses Direct Upload. GitHub pushes do not automatically update this preview. To publish a revision after checking it locally:
 
@@ -38,7 +42,7 @@ Build settings for a future Git-connected project:
 - Build command: `npm run build`
 - Build output directory: `dist`
 - Node version: `24.19.0` (set `NODE_VERSION` in the build environment if needed)
-- No runtime adapter, database, API key, or environment secret is required.
+- No Astro runtime adapter or database is required. The form requires the private secrets documented below.
 
 For a direct upload, build locally and upload the contents of `dist`. Do not upload the project root; it contains development files.
 
@@ -54,12 +58,13 @@ The generated `404.html` gives Cloudflare Pages a proper fallback page rather th
 | Compliance Advisory | `/compliance/` |
 | Human Risk | `/awareness-training/` |
 | Industries | `/industries/` |
+| Contact | `/contact/` |
 
 ## Content and design
 
 - `src/data/content.json`: retained client-supplied MDR, compliance, and human-risk copy.
 - `src/data/feedback.json`: client-supplied October 26 messaging, Asset Intelligence copy, and eight industry write-ups.
-- `src/data/site.ts`: contact destination and service-specific email subjects.
+- `src/data/site.ts`: contact links with service context carried to the shared form.
 - `src/styles/global.css`: responsive design system and page styling.
 - `src/styles/motion.css`: hero entrances and interaction transitions.
 - `src/scripts/motion.ts`: one-time scroll reveals with reduced-motion and keyboard-focus handling.
@@ -70,6 +75,21 @@ The generated `404.html` gives Cloudflare Pages a proper fallback page rather th
 
 The site uses locally bundled Inter fonts, red/cream/black sections, yellow accents, the original crest, native expandable service and industry details, and a mobile menu that supports Escape dismissal. The October 26 revision removes decorative small labels and section numbering, leads with asset visibility and blast radius, and keeps meaningful example figures. Industry deep links automatically open their matching disclosure. Hero entrances settle after a short sequence; sections reveal once as they enter the viewport. Motion respects reduced-motion preferences, and page content remains readable without JavaScript.
 
-All request buttons open an email to `luke@wyckoffconsulting.com`, as Bryan approved. They do not send automatically. No form or Resend integration has been added.
+## Contact form
+
+All contact/assessment request buttons open `/contact/`. The form collects the client's five requested fields: name, email, phone, company name, and company size (employee ranges). The originating call to action is included in the email without adding a visible field.
+
+`functions/api/contact.js` validates the request, verifies Turnstile on the server (including hostname and action), and sends the notification through Resend. Delivery is fixed to `luke@wyckoffconsulting.com`; the sender is `Security Dawgs <website@forms.securitydawgs.com>`, and Reply-To is the visitor's email. The verified sending subdomain does not change the website's address or the recipient's mailbox.
+
+Production secrets, stored encrypted in Cloudflare Pages settings:
+
+- `RESEND_API_KEY`: sending-only permission scoped to `forms.securitydawgs.com`.
+- `TURNSTILE_SECRET_KEY`: secret for the Security Dawgs Contact Form widget.
+
+The public widget key is in `src/data/form.ts`; `PUBLIC_TURNSTILE_SITE_KEY` can override it for development using Cloudflare's documented test site key. The production widget is restricted to the two Security Dawgs Pages hostnames, including their deployment subdomains. Localhost is intentionally not allowed by the production widget. Preview environments need their own configured secrets before submissions will work.
+
+The handler enforces same-origin requests, bounded input and body sizes, a honeypot, fixed email destinations, HTML escaping, provider timeouts, and Resend idempotency. It returns success only after Resend accepts the message. The browser preserves entered details on failure and resets expired/consumed challenges for retries. No CRM, database, attachment upload, or automatic visitor email is included.
+
+Run `npm test` for focused handler tests, `npm run check` for Astro/TypeScript diagnostics, and `npm run build` for the site. `wrangler pages functions build` checks the Pages Function bundle. A live browser submission is needed to verify production Turnstile and email delivery end to end.
 
 Domain setup is deliberately deferred. When a final hostname is selected, canonical URLs, absolute social-preview URLs, and a sitemap can be configured together.

@@ -1,7 +1,7 @@
 export const contactEmail = 'luke@wyckoffconsulting.com';
 
 export function contactLink(service = 'Blast Radius') {
-  return `mailto:${contactEmail}?subject=${encodeURIComponent(`Security Dawgs — ${service}`)}&body=${encodeURIComponent(`Hi Luke,\n\nI'd like to learn more about ${service.toLowerCase()} with Security Dawgs.\n\nCompany:\nBest way to reach me:\n\nThanks!`)}`;
+  return `/contact/?interest=${encodeURIComponent(service)}`;
 }
 
 export const navigation = [
