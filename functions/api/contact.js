@@ -6,7 +6,8 @@ const maxBodyBytes = 8192;
 const headers = { 'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff' };
 const json = (status, body) => new Response(JSON.stringify(body), { status, headers });
 const escapeHtml = value => value.replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
-const validHost = host => ['security-dawgs.pages.dev', 'security-dawgs-preview.pages.dev'].some(base => host === base || host.endsWith(`.${base}`));
+const validHost = host => ['securitydawgs.com', 'www.securitydawgs.com'].includes(host)
+  || ['security-dawgs.pages.dev', 'security-dawgs-preview.pages.dev'].some(base => host === base || host.endsWith(`.${base}`));
 
 async function readBody(request) {
   const reader = request.body?.getReader();

@@ -21,7 +21,7 @@ npm run preview
 
 ## Cloudflare Pages
 
-Current Git-connected website: **https://security-dawgs.pages.dev/**
+Public website: **https://www.securitydawgs.com/**. Git-connected Pages address: **https://security-dawgs.pages.dev/**.
 
 The `security-dawgs` project in Arambula722@gmail.com's Cloudflare account deploys automatically from `main` in `bryguy-404/Security-Dawgs`. Build command: `npm run build`; output: `dist`. Cloudflare also compiles the root `functions/` directory. `public/_routes.json` limits function requests to `/api/*`, keeping the marketing pages static.
 
@@ -81,10 +81,10 @@ Production secrets, stored encrypted in Cloudflare Pages settings:
 - `RESEND_API_KEY`: sending-only permission scoped to `forms.securitydawgs.com`.
 - `TURNSTILE_SECRET_KEY`: secret for the Security Dawgs Contact Form widget.
 
-The public widget key is in `src/data/form.ts`; `PUBLIC_TURNSTILE_SITE_KEY` can override it for development using Cloudflare's documented test site key. The production widget is restricted to the two Security Dawgs Pages hostnames, including their deployment subdomains. Localhost is intentionally not allowed by the production widget. Preview environments need their own configured secrets before submissions will work.
+The public widget key is in `src/data/form.ts`; `PUBLIC_TURNSTILE_SITE_KEY` can override it for development using Cloudflare's documented test site key. The production widget allows `securitydawgs.com` (which includes `www`) and the two Security Dawgs Pages hostnames, including their deployment subdomains. The server accepts the exact apex and `www` custom hostnames plus the existing Pages addresses, and still requires the Origin and verified Turnstile hostname to match the request. Localhost is intentionally not allowed by the production widget. Preview environments need their own configured secrets before submissions will work.
 
 The handler enforces same-origin requests, bounded input and body sizes, a honeypot, fixed email destinations, HTML escaping, provider timeouts, and Resend idempotency. It returns success only after Resend accepts the message. The browser preserves entered details on failure and resets expired/consumed challenges for retries. No CRM, database, attachment upload, or automatic visitor email is included.
 
 Run `npm test` for focused handler tests, `npm run check` for Astro/TypeScript diagnostics, and `npm run build` for the site. `wrangler pages functions build` checks the Pages Function bundle. A live browser submission is needed to verify production Turnstile and email delivery end to end.
 
-Domain setup is deliberately deferred. When a final hostname is selected, canonical URLs, absolute social-preview URLs, and a sitemap can be configured together.
+The `www.securitydawgs.com` custom domain is connected in Cloudflare Pages. If the website address changes again, update both the Turnstile widget's hostname list and the handler's accepted hosts. Canonical URLs, absolute social-preview URLs, and a sitemap remain a separate SEO follow-up.

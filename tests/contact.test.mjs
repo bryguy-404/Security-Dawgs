@@ -14,6 +14,27 @@ test('rejects cross-origin requests and unsupported methods without external cal
   assert.equal((await handleContact(request({}, { Origin: 'https://attacker.example' }), env, neverFetch)).status, 403);
   assert.equal((await handleContact(new Request(`${origin}/api/contact`), env, neverFetch)).status, 405);
 });
+test('accepts the custom domain with matching Turnstile hostname and keeps email addressed to Luke', async () => {
+  for (const host of ['www.securitydawgs.com', 'securitydawgs.com']) {
+    const customOrigin = `https://${host}`;
+    const customRequest = new Request(`${customOrigin}/api/contact`, { method: 'POST', headers: { Origin: customOrigin, 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+    const calls = [];
+    const response = await handleContact(customRequest, env, async (url, init) => {
+      calls.push({ url, init });
+      return apiResponse(url.includes('siteverify') ? { ...verified, hostname: host } : { id: 'custom-domain-email' });
+    });
+    assert.equal(response.status, 200);
+    assert.equal(calls.length, 2);
+    assert.deepEqual(JSON.parse(calls[1].init.body).to, ['luke@wyckoffconsulting.com']);
+  }
+});
+test('rejects lookalike and unapproved custom hostnames before provider calls', async () => {
+  for (const host of ['securitydawgs.com.attacker.example', 'notsecuritydawgs.com', 'unapproved.securitydawgs.com']) {
+    const badOrigin = `https://${host}`;
+    const badRequest = new Request(`${badOrigin}/api/contact`, { method: 'POST', headers: { Origin: badOrigin, 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+    assert.equal((await handleContact(badRequest, env, neverFetch)).status, 403);
+  }
+});
 test('validates all requested fields, body size, and token before contacting providers', async () => {
   for (const changes of [{ name: '' }, { email: 'invalid' }, { email: 'x@example.com\r\nBCC:other@example.com' }, { phone: '12' }, { company: '' }, { companySize: 'unknown' }, { token: '' }, { submissionId: 'invalid' }]) {
     assert.equal((await handleContact(request(changes), env, neverFetch)).status, 400);
