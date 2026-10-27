@@ -69,7 +69,7 @@ export async function handleContact(request, env, fetcher = fetch) {
   try {
     const delivery = await fetcher('https://api.resend.com/emails', {
       method: 'POST', signal: AbortSignal.timeout(15000),
-      headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json', 'Idempotency-Key': idempotencyKey },
+      headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json', 'User-Agent': 'security-dawgs-contact/1.0', 'Idempotency-Key': idempotencyKey },
       body: JSON.stringify({ from: sender, to: [recipient], reply_to: email, subject: `Security Dawgs website request — ${company}`, text, html }),
     });
     const result = await delivery.json();

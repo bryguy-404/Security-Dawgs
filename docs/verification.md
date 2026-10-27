@@ -1,5 +1,7 @@
 # Implementation verification
 
+Current production site: https://security-dawgs.pages.dev/. The older preview address redirects here. The October 26 contact-form verification below supersedes the earlier email-link-only flow.
+
 Completed October 21, 2026.
 
 The visitor flow is homepage → service page → email request to Luke. This is a static marketing site with no API, database, or form submission.
@@ -65,3 +67,21 @@ The revised visitor flow is homepage asset-discovery illustration → Asset Inte
 - Verified all six public routes, current titles/headlines, styles, original crest, and Luke email destinations. No desktop overflow or broken images were reported.
 - Verified the built JavaScript on the public site: both asset-map states work and the healthcare deep link opens its disclosure.
 - Browser warning/error log remained empty during public-route verification.
+
+## Contact form — October 26, 2026
+
+The current visitor flow is any contact or assessment CTA → shared contact form → server-side Turnstile verification → Resend notification → confirmation message. The existing approved page copy and button labels remain intact.
+
+- Added the five transcript-requested fields: name, email, phone, company name, and company size. Company size uses employee ranges. All five fields are required.
+- The Git-connected `security-dawgs` Pages project deploys from `main`. Form implementation commit `60433ae` deployed successfully at https://9aaaae9d.security-dawgs.pages.dev/.
+- The sending subdomain is verified in Resend. The replacement API key is restricted to sending from that domain; both it and the Turnstile secret are encrypted production secrets in Cloudflare.
+- Eight handler tests pass, covering validation, body limits, origin checks, honeypot behavior, missing credentials, Turnstile failures and hostname/action checks, fixed recipient and Reply-To, HTML escaping, idempotency, and provider failures.
+- Astro check: 24 files, zero errors, warnings, or hints. Production build: seven pages plus a 404. Pages Function bundle compiled successfully.
+- Content/link audit: all approved copy retained; 200 links resolve; one H1 on each page; one form.
+- Local visual checks at desktop and 390px/320px mobile widths. The Turnstile widget switches to compact below 300px of available form width; the 320px page has no horizontal overflow. Live desktop layout also has no horizontal overflow.
+- Live browser submission passed the real managed Turnstile challenge, reached the Pages Function, and displayed “Request received.” Resend confirmed delivery to Luke. The user-approved separate test copy to Bryan was also confirmed delivered. Ongoing submissions are fixed to Luke, with the visitor's address as Reply-To.
+- Live empty-form submission focuses the Name field and sends nothing. Separate HTTP checks returned 405 for GET, 403 for a foreign origin, and 400 for a missing security token.
+- No application errors were observed. Turnstile's third-party iframe emits opaque console diagnostics during rendering/expiration; its actual challenge and submission flow succeeded.
+- Added an explicit application User-Agent to the Resend API request as required by its API documentation; reran all eight handler tests successfully.
+- The older preview project now serves a static redirect (deployment `f5b68e68`) to the Git-connected site. Verified HTTP 302 redirects for home, contact including its interest query, and industries, preserving paths and query strings. No secrets or Functions are deployed to the legacy redirect project.
+- Private credentials and source correspondence are absent from Git and the static build output.

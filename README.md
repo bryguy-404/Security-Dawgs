@@ -25,18 +25,13 @@ Current Git-connected website: **https://security-dawgs.pages.dev/**
 
 The `security-dawgs` project in Arambula722@gmail.com's Cloudflare account deploys automatically from `main` in `bryguy-404/Security-Dawgs`. Build command: `npm run build`; output: `dist`. Cloudflare also compiles the root `functions/` directory. `public/_routes.json` limits function requests to `/api/*`, keeping the marketing pages static.
 
-The older **https://security-dawgs-preview.pages.dev/** project is a separate Direct Upload preview in another account. Updating GitHub does not update that older address.
-
-The `security-dawgs-preview` project uses Direct Upload. GitHub pushes do not automatically update this preview. To publish a revision after checking it locally:
+The older **https://security-dawgs-preview.pages.dev/** project redirects visitors to the corresponding route on the current site. This preserves previously shared preview links. It is a separate Direct Upload project; its small redirect deployment is in `deployment/legacy-preview/`. To update that redirect, run from that folder using the Cloudflare account that owns the old preview:
 
 ```sh
-npm run build
-npx wrangler@4.151.3 pages deploy dist --project-name security-dawgs-preview --branch main
+npx wrangler@4.151.3 pages deploy . --project-name security-dawgs-preview --branch main
 ```
 
-Use the Cloudflare account that owns `security-dawgs-preview`. The source remains in `bryguy-404/Security-Dawgs`. Cloudflare rejected the initial Git-connected project with an account-linking error; that integration can be resolved separately. Native Git integration would use a separate Pages project, as [Direct Upload projects cannot be converted to Git integration](https://developers.cloudflare.com/pages/get-started/direct-upload/).
-
-Build settings for a future Git-connected project:
+Current Git-connected build settings:
 
 - Framework preset: Astro
 - Build command: `npm run build`
